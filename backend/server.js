@@ -1,19 +1,11 @@
-const express = require('express');
-const cors = require('cors');
+const path = require('path');
 
-const app = express();
+// ... (keep your existing express app, cors, and API routes like /api/auth above this)
 
-// Enable CORS for your Vercel frontend
-const corsOptions = {
-  origin: ['https://aaraish-frontend-tau.vercel.app', 'http://localhost:5173'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-};
+// Serve frontend static files in production
+const frontendDist = path.join(__dirname, '../frontend/dist');
+app.use(express.static(frontendDist));
 
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // Handle preflight requests
-
-app.use(express.json());
-
-// ... (keep all your existing routes and app.listen code below)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendDist, 'index.html'));
+});
