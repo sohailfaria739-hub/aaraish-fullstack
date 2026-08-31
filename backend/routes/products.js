@@ -52,7 +52,7 @@ const ALL_PRODUCTS = [
     is_popular: 1
   },
 
-  // Jewelry (Replaces Abaya)
+  // Jewelry
   {
     id: 5,
     name: "Kundan Bridal Necklace Set",
@@ -149,9 +149,9 @@ const ALL_PRODUCTS = [
     title: "Luxury White Lace Wedding Gown",
     price: 39999,
     category: "wedding-dresses",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
-    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
-    images: ["https://images.unsplash.com/photo-1519741497674-611481863552?w=500"],
+    image: "https://images.unsplash.com/photo-1594552072238-b8a3478be3e3?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1594552072238-b8a3478be3e3?w=500",
+    images: ["https://images.unsplash.com/photo-1594552072238-b8a3478be3e3?w=500"],
     description: "Exquisite white lace bridal wedding gown with a flowing train",
     is_popular: 1
   },
@@ -161,15 +161,15 @@ const ALL_PRODUCTS = [
     title: "Classic Princess White Wedding Dress",
     price: 34999,
     category: "wedding-dresses",
-    image: "https://images.unsplash.com/photo-1546804773-81c53e43d1bc?w=500",
-    imageUrl: "https://images.unsplash.com/photo-1546804773-81c53e43d1bc?w=500",
-    images: ["https://images.unsplash.com/photo-1546804773-81c53e43d1bc?w=500"],
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
+    images: ["https://images.unsplash.com/photo-1519741497674-611481863552?w=500"],
     description: "Stunning fairytale white wedding dress",
     is_popular: 1
   }
 ];
 
-// Get categories with updated counts
+// Get categories
 router.get('/categories', (req, res) => {
   res.json({
     categories: [
