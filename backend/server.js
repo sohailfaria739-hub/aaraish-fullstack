@@ -35,4 +35,6 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Aaraish API running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Aaraish API running on port ${PORT}`));
+
+module.exports = app;
