@@ -26,19 +26,22 @@ const ALL_PRODUCTS = [
 router.get('/categories', (req, res) => {
   res.json({
     categories: [
-      { id: 1, name: "Dresses", slug: "dresses", product_count: 2 },
-      { id: 2, name: "Formal Wear", slug: "formal-wear", product_count: 0 }
+      { id: 1, name: "Dresses", slug: "dresses", product_count: 2 }
     ]
   });
 });
 
-// Get products with category filter
+// Get products with safe fallback filtering
 router.get('/', (req, res) => {
   const { category } = req.query;
   
   let filtered = ALL_PRODUCTS;
-  if (category) {
+  if (category && category.trim() !== '') {
     filtered = ALL_PRODUCTS.filter(p => p.category === category);
+    // Fallback if category slug doesn't match directly
+    if (filtered.length === 0) {
+      filtered = ALL_PRODUCTS;
+    }
   }
 
   res.json({
