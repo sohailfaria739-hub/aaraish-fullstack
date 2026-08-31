@@ -5,18 +5,22 @@ const ALL_PRODUCTS = [
   {
     id: 1,
     name: "Classic Silk Dress",
+    title: "Classic Silk Dress",
     price: 4999,
     category: "dresses",
     image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500",
     description: "Elegant silk dress",
     is_popular: 1
   },
   {
     id: 2,
     name: "Casual Summer Outfit",
+    title: "Casual Summer Outfit",
     price: 2999,
     category: "dresses",
     image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500",
     description: "Lightweight summer wear",
     is_popular: 1
   }
@@ -31,23 +35,12 @@ router.get('/categories', (req, res) => {
   });
 });
 
-// Get products with safe fallback filtering
+// Get products
 router.get('/', (req, res) => {
-  const { category } = req.query;
-  
-  let filtered = ALL_PRODUCTS;
-  if (category && category.trim() !== '') {
-    filtered = ALL_PRODUCTS.filter(p => p.category === category);
-    // Fallback if category slug doesn't match directly
-    if (filtered.length === 0) {
-      filtered = ALL_PRODUCTS;
-    }
-  }
-
   res.json({
-    products: filtered,
+    products: ALL_PRODUCTS,
     pagination: {
-      total: filtered.length,
+      total: ALL_PRODUCTS.length,
       totalPages: 1,
       currentPage: 1
     }
