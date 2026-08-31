@@ -52,29 +52,29 @@ const ALL_PRODUCTS = [
     is_popular: 1
   },
 
-  // Abayas
+  // Jewelry (Replaces Abaya)
   {
     id: 5,
-    name: "Embroidered Luxury Black Abaya",
-    title: "Embroidered Luxury Black Abaya",
-    price: 3499,
-    category: "abaya",
-    image: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=500",
-    imageUrl: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=500",
-    images: ["https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=500"],
-    description: "Graceful daily wear abaya with fine embroidery",
+    name: "Kundan Bridal Necklace Set",
+    title: "Kundan Bridal Necklace Set",
+    price: 12999,
+    category: "jewelry",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500",
+    images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500"],
+    description: "Exquisite traditional kundan necklace set with earrings",
     is_popular: 1
   },
   {
     id: 6,
-    name: "Modern Open Front Abaya",
-    title: "Modern Open Front Abaya",
-    price: 3899,
-    category: "abaya",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500",
-    imageUrl: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500",
-    images: ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500"],
-    description: "Elegant minimalist open front modern abaya",
+    name: "Sparkling Diamond-Style Choker",
+    title: "Sparkling Diamond-Style Choker",
+    price: 8999,
+    category: "jewelry",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500",
+    images: ["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500"],
+    description: "Elegant party wear crystal choker set",
     is_popular: 1
   },
 
@@ -142,40 +142,40 @@ const ALL_PRODUCTS = [
     is_popular: 1
   },
 
-  // Wedding Dresses
+  // Wedding Dresses (White Gowns)
   {
     id: 12,
-    name: "Royal Crimson Bridal Lehenga",
-    title: "Royal Crimson Bridal Lehenga",
-    price: 34999,
+    name: "Luxury White Lace Wedding Gown",
+    title: "Luxury White Lace Wedding Gown",
+    price: 39999,
     category: "wedding-dresses",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500",
-    imageUrl: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500",
-    images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500"],
-    description: "Exquisite heavy bridal wear with intricate zardozi work",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500",
+    images: ["https://images.unsplash.com/photo-1519741497674-611481863552?w=500"],
+    description: "Exquisite white lace bridal wedding gown with a flowing train",
     is_popular: 1
   },
   {
     id: 13,
-    name: "Pastel Wedding Maxi & Dupatta",
-    title: "Pastel Wedding Maxi & Dupatta",
-    price: 28999,
+    name: "Classic Princess White Wedding Dress",
+    title: "Classic Princess White Wedding Dress",
+    price: 34999,
     category: "wedding-dresses",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500",
-    imageUrl: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500",
-    images: ["https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500"],
-    description: "Gorgeous pastel maxi gown for Walima or reception",
+    image: "https://images.unsplash.com/photo-1546804773-81c53e43d1bc?w=500",
+    imageUrl: "https://images.unsplash.com/photo-1546804773-81c53e43d1bc?w=500",
+    images: ["https://images.unsplash.com/photo-1546804773-81c53e43d1bc?w=500"],
+    description: "Stunning fairytale white wedding dress",
     is_popular: 1
   }
 ];
 
-// Get categories with accurate item counts
+// Get categories with updated counts
 router.get('/categories', (req, res) => {
   res.json({
     categories: [
       { id: 1, name: "Formal Dresses", slug: "formal-dresses", product_count: 2 },
       { id: 2, name: "Party Dresses", slug: "party-dresses", product_count: 2 },
-      { id: 3, name: "Abaya", slug: "abaya", product_count: 2 },
+      { id: 3, name: "Jewelry", slug: "jewelry", product_count: 2 },
       { id: 4, name: "Shoes", slug: "shoes", product_count: 3 },
       { id: 5, name: "Bags", slug: "bags", product_count: 2 },
       { id: 6, name: "Wedding Dresses", slug: "wedding-dresses", product_count: 2 }
